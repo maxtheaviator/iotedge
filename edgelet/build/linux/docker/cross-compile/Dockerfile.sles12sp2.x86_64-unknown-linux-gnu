@@ -1,0 +1,12 @@
+FROM suse/sles12sp2
+
+RUN zypper install -y gcc \
+        gcc-c++ \
+        make \
+        git \
+        libopenssl-devel \
+        libcurl-devel \
+        libuuid-devel
+
+COPY zypper/cmake.sh /
+RUN bash /cmake.sh 3.11.4

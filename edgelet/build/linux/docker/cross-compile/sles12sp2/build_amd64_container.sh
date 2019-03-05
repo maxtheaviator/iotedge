@@ -4,7 +4,7 @@ set -ex
 . ./containers.sh
 
 main() {
-    local Dockerfile.sles12sp2.x86_64-unknown-linux-gnu
+    local dockerfile=Dockerfile.sles12sp2.x86_64-unknown-linux-gnu
     if [[ ! -f $dockerfile ]]
     then
         echo "Expected $dockerfile in current directory."
